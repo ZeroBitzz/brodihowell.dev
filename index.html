@@ -37,7 +37,7 @@
 	margin-bottom: 20%;
 	font-size: 400%;
 	font-family: 'Bangers', cursive;
-	content: "The Great Color Game"
+	content: "The Color Game"
 }
 #rgbDisplay{
 	color: rgb(255, 0, 102);	
@@ -144,7 +144,7 @@ var change = document.querySelector("#changeSquare");
 var randomAnswer = Math.floor((Math.random() * colors.length));
 var correctAnswer = squares[randomAnswer];
 var title = document.querySelector("#title");
-title.textContent = "The Great Color Game";
+title.textContent = "The Color Game";
 var squared = false;
 function randomColor(){
 	var r = Math.floor((Math.random() * 256) + 0);
