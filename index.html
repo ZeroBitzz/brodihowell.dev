@@ -1,122 +1,176 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Zero Web Dev</title>
-		<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+	<title>Color Guesser</title>
+	<link rel="stylesheet" type="text/css" href="colorGuesser.css">
+	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
-	<style type="text/css">
-		body{
-	background-color: black;
-	transition: background-color 1s ease-out;
-}
-.square{
-	width: 200px;
-	background: rgb(0, 255, 153);;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	border-radius: 50%;
-	transition: background-color 1s ease-out;
-}
-.circle{
-	width: 200px;
-	background: rgb(0, 255, 153);;
-	padding-bottom: 30%;
-	float: left;
-	margin: 1.66%;
-	/*border-radius: 50%;*/
-	transition: background-color 1s ease-out;
-}
-.container{
-	max-width: 700px;
-	margin: 0 auto;
-}
-#title{
-	color: rgb(0, 255, 153) !important;
-	float: left;
-	padding-right: 20%;
-	padding-left: 32%;
-	margin-bottom: 20%;
-	font-size: 400%;
-	font-family: 'Bangers', cursive;
-	content: "The Color Game"
-}
-#rgbDisplay{
-	color: rgb(255, 0, 102);	
-	font-family: 'Sigmar One', cursive;
-	float: left;
-	padding-right: 20%;
-	padding-left: 37%;
-	margin-top: -20%;
-}
-.rgbDisplay{
-	color: rgb(255, 0, 102) !important;
-		font-family: 'Sigmar One', cursive;
-	float: left;
-	padding-right: 20%;
-	padding-left: 37%;
-	margin-top: -20%;
-}
-.square:hover{
-	cursor: crosshair;
-}
-#newClass{
-	color: rgb(0, 255, 153);
-	float: left;
-	padding-right: 20%;
-	padding-left: 40%;
-	margin-bottom: 20%;
-	font-size: 400%;
-	font-family: 'Bangers', cursive;
-}
-#wrongClass{
-	color: rgb(255,0,0);
-	float: left;
-	padding-right: 20%;
-	padding-left: 40%;
-	margin-bottom: 20%;
-	font-size: 400%;
-	font-family: 'Bangers', cursive;
-}
-#stop{
-	color: rgb(255,0,0);
-	float: left;
-	padding-right: 20%;
-	padding-left: 42%;
-	margin-bottom: 20%;
-	font-size: 400%;
-	font-family: 'Bangers', cursive;
-}
-#changeSquare {
-	background-color: rgb(0, 255, 255);
-	border: none;
-	float: left;
-	margin-left: 47.2%;
-	margin-top: -17%;
-	margin-bottom: 5%;
-	color: black;
-	font-family: 'Bangers', cursive;
-	font-size: 600%;
-	padding: 15px 32px;
-	text-align: center;
-	font-size: 16px;
-}
-#changeCircle{
-	background-color: rgb(0, 255, 255);
-	border: none;
-	float: left;
-	margin-left: 47.2%;
-	margin-top: -17%;
-	margin-bottom: 5%;
-	color: black;
-	font-family: 'Bangers', cursive;
-	font-size: 600%;
-	padding: 15px 32px;
-	text-align: center;
-	font-size: 16px;
-	border-radius: 50%;
-}
-	</style>
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous">
+  	</script>
+  	<style type="text/css">
+		  		body{
+			background-color: black;
+			transition: background-color 10s ease-out;
+		}
+		.square{
+			width: 200px;
+			background: rgb(0, 255, 153);;
+			padding-bottom: 30%;
+			float: left;
+			margin: 1.66%;
+			border-radius: 50%;
+			transition: background-color 1s ease-out;
+		}
+		.circle{
+			width: 200px;
+			background: rgb(0, 255, 153);;
+			padding-bottom: 30%;
+			float: left;
+			margin: 1.66%;
+			/*border-radius: 50%;*/
+			transition: background-color 1s ease-out;
+		}
+		.container{
+			max-width: 700px;
+			margin: 0 auto;
+		}
+		#title{
+			color: rgb(0, 255, 153) !important;
+			float: left;
+			padding-right: 20%;
+			padding-left: 36%;
+			margin-bottom: 20%;
+			font-size: 400%;
+			font-family: 'Bangers', cursive;
+			content: "The Great Color Game"
+		}
+		#rgbDisplay{
+			color: rgb(255, 0, 102);
+			font-family: 'Sigmar One', cursive;
+			float: left;
+			padding-right: 20%;
+			padding-left: 43%;
+			margin-top: -20%;
+		}
+		/*.rgbDisplay{
+			color: rgb(255, 0, 102) !important;
+				font-family: 'Sigmar One', cursive;
+			float: left;
+			padding-right: 20%;
+			padding-left: 43%;
+			margin-top: -20%;
+		}*/
+		.square:hover{
+			cursor: crosshair;
+		}
+		#newClass{
+			color: rgb(0, 255, 153);
+			float: left;
+			padding-right: 20%;
+			padding-left: 45%;
+			margin-bottom: 20%;
+			font-size: 400%;
+			font-family: 'Bangers', cursive;
+		}
+		#wrongClass{
+			color: rgb(255,0,0);
+			float: left;
+			padding-right: 20%;
+			padding-left: 44.1%;
+			margin-bottom: 20%;
+			font-size: 400%;
+			font-family: 'Bangers', cursive;
+		}
+		#stop{
+			color: rgb(255,0,0);
+			float: left;
+			padding-right: 20%;
+			padding-left: 36%;
+			margin-bottom: 20%;
+			font-size: 400%;
+			font-family: 'Bangers', cursive;
+		}
+		#changeSquare {
+			background-color: rgb(0, 255, 255);
+			border: none;
+			float: left;
+			margin-left: 47.2%;
+			margin-top: -17%;
+			margin-bottom: 5%;
+			color: black;
+			font-family: 'Bangers', cursive;
+			font-size: 600%;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+		}
+		#changeCircle{
+			background-color: rgb(0, 255, 255);
+			float: left;
+			margin-left: 47.2%;
+			margin-top: -17%;
+			margin-bottom: 5%;
+			color: black;
+			font-family: 'Bangers', cursive;
+			font-size: 600%;
+			padding: 15px 32px;
+			text-align: center;
+			font-size: 16px;
+			border-radius: 50%;	border: none;
+
+		}
+		button {
+		  border: none;
+		  color: black;
+		  background-color: rgb(255, 0, 102);
+		  padding: 15px 32px;
+		  text-align: center;
+		  font-size: 16px;
+		  border-radius: 25%;
+		  font-family: 'Bangers', cursive;
+		  margin-top: -16%;
+		  margin-left: 48%;
+		  margin-bottom: 0%;
+		  transition: background-color .5s ease-out;
+		  float: left;
+		  position: center fixed;
+		}
+		#button {
+		  border: none;
+		  color: black;
+		  background-color: rgb(255, 0, 102);
+		  padding: 15px 32px;
+		  text-align: center;
+		  font-size: 16px;
+		  border-radius: 25%;
+		  font-family: 'Bangers', cursive;
+		  margin-top: -16%;
+		  margin-left: 48%;
+		  margin-bottom: 0%;
+
+		  float: left;
+		  position: center fixed;
+		}
+		#bigButton{
+			border: none;
+		  color: black;
+		  background-color: rgb(255, 0, 102);
+		  padding: 15px 32px;
+		  text-align: center;
+		  font-size: 16px;
+		  border-radius: 25%;
+		  font-family: 'Bangers', cursive;
+		  margin-top: -16%;
+		  margin-left: 48%;
+		  margin-bottom: 0%;
+		    transition: background-color .5s ease-out;
+		  width: 150%;
+		  height: 150%;
+		}
+  	</style>
 </head>
 <body>
 <div class="container">
@@ -129,96 +183,104 @@
 </div>
 <h1 id="title">The Great Color Game</h1>
 <h1 id="rgbDisplay">rgb(255,0,0)</h1>
+<button id="reset">RESET</button>
 <!-- <button id="changeSquare" onclick="reset()">Reset</button> -->
-	<script type="text/javascript">
-		var colors = [
-"rgb(255,0,0)",
-"rgb(0,255,255)",
-"rgb(0,0,255)",
-"rgb(255,255,0)",
-"rgb(0,255,0)",
-"rgb(255,0,255)"
-]
-var squares = document.querySelectorAll(".square");
-var rgb = document.querySelector("#rgbDisplay");
-var body = document.querySelector("body");
-var change = document.querySelector("#changeSquare");
-var randomAnswer = Math.floor((Math.random() * colors.length));
-var correctAnswer = squares[randomAnswer];
-var title = document.querySelector("#title");
-title.textContent = "The Color Game";
-var squared = false;
-function randomColor(){
-	var r = Math.floor((Math.random() * 256) + 0);
-	var g = Math.floor((Math.random() * 256) + 0);
-	var b = Math.floor((Math.random() * 256) + 0);
+<script type="text/javascript">
+	var colors = [
+	"rgb(255,0,0)",
+	"rgb(0,255,255)",
+	"rgb(0,0,255)",
+	"rgb(255,255,0)",
+	"rgb(0,255,0)",
+	"rgb(255,0,255)"
+	]
+	var squares = document.querySelectorAll(".square");
+	var rgb = document.querySelector("#rgbDisplay");
+	var body = document.querySelector("body");
+	var change = document.querySelector("#changeSquare");
+	var resetButton = document.querySelector("#reset");
+	var title = document.querySelector("#title");
+	var squared = false;
 
-	return r + "," + g + "," + b;
-}
-function bodyColor(){
-	body.style.backgroundColor = answerRGB;
-}
-// change.addEventListener("click", function(){
-// 	console.log("change");
-// 	change.id = "changeCircle";
-// 	squared = true;
-// })
-// if (squared === true) {
-// 	squares.class = "circle";
-// }
-var gameOn = true;
-	for (var i = 0; squares.length; i++) {
-	var clicked = false;
-	//backtics are for interpolation `${var}`
-	var x = `rgb(${randomColor()})`;
-	//var x = 'rgb(' + randomColor() + ')';
-	squares[i].style.background = x;
-	
-	var answerRGB = `rgb(${randomColor()})`;
-	correctAnswer.style.background = answerRGB;
-	rgb.textContent = answerRGB;
+	title.textContent = "The Great Color Game";
 
-	squares[randomAnswer].addEventListener("click", function(){
-		if (gameOn === true) {
-			console.log("correct!!");
-			title.textContent = "Correct!"
-			title.id = "newClass";
-			title.style.color = answerRGB;
-			// body.style.backgroundColor = answerRGB;
-			gameOn = false;
-			console.log(gameOn);
-			rgb.style.color = answerRGB;
-			for (var i = squares.length - 1; i >= 0; i--) {
-				squares[i].style.background = answerRGB;
+		function randomColor(r,g,b){
+		r = Math.floor((Math.random() * 256) + 0);
+		g = Math.floor((Math.random() * 256) + 0);
+		b = Math.floor((Math.random() * 256) + 0);
+
+		return r + "," + g + "," + b;
+	}
+	function gameSwitch(){
+		var randomAnswer = Math.floor((Math.random() * colors.length));
+		var correctAnswer = squares[randomAnswer];
+		var gameOn = true;
+		body.style.backgroundColor = "black";
+		resetButton.id = "button";
+		resetButton.style.backgroundColor = "lime";
+		title.id = "title";
+		title.textContent = "The Great Color Game";
+		rgb.id = "rgbDisplay";
+		button.style.color = "black";
+		for (var i = 0; squares.length; i++) {
+		var clicked = false;
+		//backtics are for interpolation `${var}`
+		var x = `rgb(${randomColor()})`;
+		//var x = 'rgb(' + randomColor() + ')';
+		squares[i].style.background = x;
+		
+		var answerRGB = x;
+		correctAnswer.style.background = answerRGB;
+		rgb.textContent = answerRGB;
+
+		squares[randomAnswer].addEventListener("click", function(){
+			if (gameOn === true) {
+				console.log("correct!!");
+				title.textContent = "Correct!"
+				title.id = "newClass";
+				title.style.color = answerRGB;
+				body.style.backgroundColor = answerRGB;
+				// resetButton.id = "bigButton";
+				resetButton.style.backgroundColor = "black";
+				resetButton.style.color = answerRGB;
+				gameOn = false;
+				console.log(gameOn);
+				rgb.style.color = answerRGB;
+				for (var i = squares.length - 1; i >= 0; i--) {
+					squares[i].style.background = answerRGB;
+				}
 			}
-			setTimeout(bodyColor, 1000);
-		}
+		})
+		squares[i].addEventListener("click", function(){
+			if (gameOn === true) {
+				title.textContent = "Try Again";
+				title.id = "wrongClass";
+				console.log("clicked");
+				//this.style.display = "none";
+				this.style.backgroundColor = body.style.backgroundColor;
+				clicked = true;
+			}else{
+				var enough = 0;
+				for (var i = squares.length - 1; i >= 0; i--) {
+					squares[i].addEventListener("click", function(){
+					enough += 1;
+					console.log(enough);
+					if (enough >= 10) {
+					title.textContent = "This isn't cookie clicker";
+					title.id = "stop";
+				}
+				})
+				}
+			}
+		})
+
+	}
+	}
+	resetButton.addEventListener("click", function(){
+		console.log("resetButton clicked");
+		gameSwitch();
 	})
-	squares[i].addEventListener("click", function(){
-		if (gameOn === true) {
-			title.textContent = "Try Again";
-			title.id = "wrongClass";
-			console.log("clicked");
-			//this.style.display = "none";
-			this.style.backgroundColor = "black";
-			clicked = true;
-		}else{
-			var enough = 0;
-			for (var i = squares.length - 1; i >= 0; i--) {
-				squares[i].addEventListener("click", function(){
-				enough += 1;
-				console.log(enough);
-				if (enough >= 5) {
-				title.textContent = "Stop Clicking";
-				title.id = "stop";
-			}
-			})
-			}
-		}
-	})
-
-}
-
-	</script>
+	gameSwitch();
+</script>
 </body>
 </html>
