@@ -155,7 +155,7 @@
 		  position: center fixed;
 		}
 		#bigButton{
-			border: none;
+		border: none;
 		  color: black;
 		  background-color: rgb(255, 0, 102);
 		  padding: 15px 32px;
@@ -166,9 +166,9 @@
 		  margin-top: -16%;
 		  margin-left: 48%;
 		  margin-bottom: 0%;
-		    transition: background-color .5s ease-out;
-		  width: 150%;
-		  height: 150%;
+		  transition: background-color .5s ease-out;
+		  width: 500px;
+		  height: 500px;
 		}
   	</style>
 </head>
@@ -238,6 +238,7 @@
 				console.log("correct!!");
 				title.textContent = "Correct!"
 				title.id = "newClass";
+				resetButton.id = "bigButton";
 				title.style.color = answerRGB;
 				body.style.backgroundColor = answerRGB;
 				// resetButton.id = "bigButton";
