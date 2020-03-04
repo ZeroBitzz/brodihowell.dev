@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Color Guesser</title>
-	<link rel="stylesheet" type="text/css" href="colorGuesser.css">
+	//<link rel="stylesheet" type="text/css" href="colorGuesser.css">
 	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
 	<script
@@ -11,7 +11,7 @@
 	  crossorigin="anonymous">
   	</script>
   	<style type="text/css">
-  	body{
+  		body{
 	background-color: black;
 	transition: background-color 10s ease-out;
 }
@@ -137,7 +137,6 @@ button {
   transition: background-color .5s ease-out;
   float: left;
   position: center fixed;
-  
 }
 #button {
   border: none;
@@ -151,22 +150,7 @@ button {
   margin-top: -16%;
   margin-left: 48%;
   margin-bottom: 0%;
-  display: none;
-  float: left;
-  position: center fixed;
-}
-#slideUp{
-	border: none;
-  color: black;
-  background-color: rgb(255, 0, 102);
-  padding: 15px 32px;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 25%;
-  font-family: 'Bangers', cursive;
-  margin-top: -16%;
-  margin-left: 48%;
-  margin-bottom: 0%;
+
   float: left;
   position: center fixed;
 }
@@ -199,10 +183,11 @@ button {
 </div>
 <h1 id="title">The Great Color Game</h1>
 <h1 id="rgbDisplay">rgb(255,0,0)</h1>
+<h1 id="score">Score</h1>
 <button id="reset">RESET</button>
 <!-- <button id="changeSquare" onclick="reset()">Reset</button> -->
 <script type="text/javascript">
-var colors = [
+	var colors = [
 "rgb(255,0,0)",
 "rgb(0,255,255)",
 "rgb(0,0,255)",
@@ -244,31 +229,23 @@ function gameSwitch(){
 	var x = `rgb(${randomColor()})`;
 	//var x = 'rgb(' + randomColor() + ')';
 	squares[i].style.background = x;
-	
-	x = `rgb(${randomColor()})`;
+	var x = `rgb(${randomColor()})`;
 	var answerRGB = x;
 	correctAnswer.style.background = answerRGB;
 	rgb.textContent = answerRGB;
 
 	squares[randomAnswer].addEventListener("click", function(){
-		function slideUp(){
-			$("button").slideUp(3000, function(){
-				resetButton.id = "slideUp";
-			})
-		}
 		if (gameOn === true) {
 			console.log("correct!!");
+			title.textContent = "Correct!"
 			title.id = "newClass";
 			title.style.color = answerRGB;
 			body.style.backgroundColor = answerRGB;
 			// resetButton.id = "bigButton";
 			resetButton.style.backgroundColor = "black";
 			resetButton.style.color = answerRGB;
-			setTimeout(slideUp, 3000)
-			
 			gameOn = false;
 			console.log(gameOn);
-			title.textContent = "Correct!";
 			rgb.style.color = answerRGB;
 			for (var i = squares.length - 1; i >= 0; i--) {
 				squares[i].style.background = answerRGB;
