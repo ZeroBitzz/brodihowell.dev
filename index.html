@@ -5,13 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="colorGuesser.css">
 	<link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<script
 	  src="https://code.jquery.com/jquery-3.4.1.js"
 	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
 	  crossorigin="anonymous">
-  	</script>
-  	<style type="text/css">
-  		body{
+	  </script>
+	  <style>
+		  body{
 	background-color: black;
 	transition: background-color 10s ease-out;
 }
@@ -39,21 +40,42 @@
 }
 #title{
 	color: rgb(0, 255, 153) !important;
-	float: left;
-	padding-right: 20%;
-	padding-left: 36%;
-	margin-bottom: 20%;
-	font-size: 400%;
-	font-family: 'Bangers', cursive;
-	content: "The Great Color Game"
+    float: left;
+    margin-bottom: 20%;
+    font-size: 400%;
+    font-family: 'Bangers', cursive;
+    content: "The Great Color Game";
+    margin-left: 90px;
+}
+#score{
+	color: rgb(123, 3, 252);
+    font-family: 'Bangers', cursive;
+    margin-top: 50%;
+    top: auto;
+    float: right;
+    position: absolute;
+    right: 80%;
+    font-size: 100px;
+    top: -900px;
+}
+#scoreNum{
+	color: rgb(123, 3, 252);
+    font-family: 'Bangers', cursive;
+    margin-top: 50%;
+    top: auto;
+    float: right;
+    position: absolute;
+    right: 89%;
+    font-size: 100px;
+    top: -800px;
 }
 #rgbDisplay{
-	color: rgb(255, 0, 102);
-	font-family: 'Sigmar One', cursive;
-	float: left;
-	padding-right: 20%;
-	padding-left: 43%;
-	margin-top: -20%;
+    color: rgb(255, 0, 102);
+    font-family: 'Sigmar One', cursive;
+    float: left;
+    padding-right: 20%;
+    padding-left: 30%;
+    margin-top: -20%;
 }
 /*.rgbDisplay{
 	color: rgb(255, 0, 102) !important;
@@ -186,23 +208,25 @@ button {
   width: 150%;
   height: 150%;
 }
-  	</style>
+	  </style>
 </head>
 <body>
 <div class="container">
+	<div class="square" class="col-lg"></div>
 	<div class="square"></div>
 	<div class="square"></div>
 	<div class="square"></div>
 	<div class="square"></div>
 	<div class="square"></div>
-	<div class="square"></div>
-</div>
-<h1 id="title">The Great Color Game</h1>
+	<h1 id="title">The Great Color Game</h1>
+<!-- <div id="score">SCORE</div>
+<div id="scoreNum">0</div> -->
 <h1 id="rgbDisplay">rgb(255,0,0)</h1>
 <button id="reset">RESET</button>
-<!-- <button id="changeSquare" onclick="reset()">Reset</button> -->
+</div>
+
 <script type="text/javascript">
-	var colors = [
+var colors = [
 "rgb(255,0,0)",
 "rgb(0,255,255)",
 "rgb(0,0,255)",
@@ -258,6 +282,7 @@ function gameSwitch(){
 		}
 		if (gameOn === true) {
 			console.log("correct!!");
+			$("scoreNum").css("textContent: 1");
 			title.id = "newClass";
 			title.style.color = answerRGB;
 			body.style.backgroundColor = answerRGB;
@@ -278,6 +303,7 @@ function gameSwitch(){
 	squares[i].addEventListener("click", function(){
 		if (gameOn === true) {
 			title.textContent = "Try Again";
+			$("scoreNum").css("textContent: 0");
 			title.id = "wrongClass";
 			console.log("clicked");
 			//this.style.display = "none";
