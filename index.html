@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Broderick</title>
+    <link rel="icon" href="./assests/images/floppy disk.png">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="./assests/styles/style.css" />
     <script src="./assests/scripts/script.js"></script>
   </head>
-  <body>
+  <body id="crt moniter" class="off">
+    <!-- the actual device -->
+    <div id="monitor">
+        <!-- the rounded edge near the glass -->
+        <div id="bezel">
+            <!-- the overlay and horizontal pattern -->
+            <div id="crt" class="off"> 
+                <!-- slowly moving scanline -->
+                <div class="scanline"></div>
+                <!-- the input and output -->
+                <div class="terminal"></div>
+            </div>
+        </div>
+    </div>
+    <div class="scanline"></div>
         <header>
-            VERSION 2.1
+            <span>WEBSITE 2.1 (2074-2099)</span>
+            <a href="#">LINK</a>
             <div class="dropdown">
                 <button class="dropbtn">CONTACT ME</button>
                 <div class="dropdown-content">
@@ -29,9 +46,40 @@
                 <button class="blinker"></button>
         </pre>
 
+        <section id="about-me-section">
+            <label id="about-me-label">ABOUT ME</label>
+            <ul class="about-me-list">
+                <label id="bio-label">BIO</label>
+                <li>LOREM IPSUM DOLOR SIT</li>
+                <li>AMET, CONSECTETUR  </li>
+                <li>ADIPISCING ELIT, SED</li>
+                <li>DO EIUSMOD TEMPOR</li>
+                <li>INCIDIDUNT UT LABORE</li>
+                <li>ET DOLORE MAGNA ALIQUA</li>
+            </ul>
+            <ul class="about-me-list">
+                <label id="education-label">EDUCATION</label>
+                <li>CURRENTLY ENROLLED AT U OF U</li>
+                <li>SOME COMMUNITY COLLEGE (SLCC)</li>
+                <li>HIGH SCHOOL DIPLOMA</li>
+                <li>COMPUTER PROGRAMMING CERT</li>
+                <li>COMPUTER SCIENCE CERT</li>
+                <li>CODECADEMY SOFTWARE ENGINEER COURSE</li>
+            </ul>
+            <ul class="about-me-list">
+                <label id="skills-label">SKILLS</label>
+                <li>JAVASCRIPT</li>
+                <li>PYTHON 3</li>
+                <li>GIT</li>
+                <li>HTML</li>
+                <li>GOOGLING</li>
+                <li>CSS</li>
+                <li>ADOBE ILLUSTRATOR</li>
+            </ul>
+        </section>
+
     <footer>
         <span>STATUS: CONNECTED </span>
-        <span>2002-2022</span>
         <button type="button" id="exit-button" onclick="window.open('', '_self', ''); window.close();">EXIT PAGE</button>
         <iframe src="https://free.timeanddate.com/clock/i8k7a9r5/n220/fn7/fs20/tct/pct/ftb/th2" frameborder="0" width="128" height="30" allowtransparency="true"></iframe>
     </footer>

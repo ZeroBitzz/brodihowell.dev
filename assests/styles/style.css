@@ -1,11 +1,39 @@
+/* 
+----------INDEX----------
+BASIC ELEMENT SELECTORS [LINE 13]
+LOADING SCREEN          [LINE 41]
+HEADER CONTENT          [LINE 85]
+FOOTER CONTENT          [LINE 141]
+MAIN PAGE DATA          [LINE 160]
+BREAKPOINTS             [LINE 233]
+CRT EFFECTS             [LINE 262]
+ANIMATIONS              [LINE 298]
+*/
+
+/* BASIC ELEMENT SELECTORS */
+
 * {
     box-sizing: border-box;
+    animation: text-shadow 5s infinite;
 }
 
 body {
     background-color: black;
     color: lime;
-    overflow: hidden;
+}
+
+::selection {
+    background: rgb(0, 95, 8);
+    color: #9bffa4;
+  }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(0, 122, 0);
 }
 
 
@@ -54,16 +82,17 @@ body {
     animation: loader-inner 3s ease-in;
 }
 
-/* HEADING */
+/* HEADER CONTENT */
 
 header {
+    font-size: xx-large;
     font-family: fantasy;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: absolute;
+    justify-content: space-around;
+    position: fixed;
     width: 100%;
     height: 40px;
     left: 0;
@@ -72,30 +101,14 @@ header {
     color: black;
 }
 
-/* FOOTER */
-
-footer {
-    font-family: fantasy;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: lime;
-    color: black;
-}
-
 .dropbtn {
     font-family: fantasy;
     background-color: lime;
     color: black;
-    width: 30px;
+    width: 200px;
     height: 60px;
     margin-top: 50px;
-    font-size: 16px;
-    width: 100px;
+    font-size: 30px;
 }
   
 .dropdown {
@@ -104,6 +117,7 @@ footer {
 }
   
 .dropdown-content {
+    border: 3px solid black;
     display: none;
     position: absolute;
     background-color: lime;
@@ -124,16 +138,31 @@ footer {
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+/* FOOTER CONTENT */
+
+footer {
+    font-family: fantasy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: lime;
+    color: black;
+}
 
 #exit-button{
     background-color: lime;
 }
 
-/* META DATA */
+/* MAIN PAGE DATA */
 
 #name {
     display: flex;
     margin-top: 50px;
+    margin-left: -70px;
 }
 
 .blinker {
@@ -144,24 +173,129 @@ footer {
     margin-top: 50px;
 }
 
+#about-me-section {
+    border: 5px solid lime;
+    border-top: 40px solid lime;
+    display: flex;
+    font-family: fantasy;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
+#about-me-label {
+    color: black;
+    position: absolute;
+    top: 200px;
+    font-size: xx-large;
+}
 
+.about-me-list {
+    height: 100%;
+    font-size: xx-large;
+    border: 5px solid lime;
+    border-top: 30px solid lime;
+    display: inline-table;
+    justify-content: space-around;
+}
 
+.about-me-list > li {
+    list-style-type: none;
+    margin-right: 40px;
+}
 
+#bio-label {
+    font-size: x-large;
+    color: black;
+    background-color: lime;
+    margin-left: 35%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+#education-label {
+    font-size: x-large;
+    color: black;
+    background-color: lime;
+    margin-left: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+#skills-label {
+    font-size: x-large;
+    color: black;
+    background-color: lime;
+    margin-left: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
+/* BREAKPOINTS */
 
+@media screen and (max-width: 690px) {
+    header > span {
+        display: none;
+    }
 
+    #name {
+        font-size: xx-small;
+        margin-left: -50px;
+    }
 
+    #about-me-label {
+        top: 150px;
+    }
 
-@media screen and (max-width: 900px) {
-    body {
-        background-color: blue;
+    .dropbtn {
+        margin-top: -10px;
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .blinker {
+        width: 10px;
+        height: 30px;
+        margin-top: 40px;
     }
 }
 
-/* animations */
+/* CRT EFFECTS */
+.scanline {
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255, 255, 255, 0.2) 10%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    opacity: .9;
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 10s linear infinite;
+}
+
+
+#crt:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ANIMATIONS */
 @keyframes blinker {
     0% {opacity: 0;}
     50% {opacity: 1;}
@@ -173,4 +307,28 @@ footer {
     25% { width: 20%;}
     50% { width: 75%;}
     100% {width: 100%;}
+}
+
+@keyframes text-shadow {
+    0% {
+      text-shadow: 0.4389924193300864px 0 1px rgba(0, 255, 13, 0.5), -0.4389924193300864px 0 1px rgba(0, 255, 157, 0.3), 0 0 3px;
+    }
+    50% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0, 255, 13, 0.5), -2.7928974010788217px 0 1px rgba(0, 255, 157, 0.3), 0 0 3px;
+    }
+    100% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0, 255, 13, 0.5), -0.4389924193300864px 0 1px rgba(0, 255, 157, 0.3), 0 0 3px;
+    }
+}
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+    80% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
 }
