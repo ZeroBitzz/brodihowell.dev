@@ -7,87 +7,95 @@
     <link rel="stylesheet" type="text/css" href="./assests/styles/style.css" />
     <script src="./assests/scripts/script.js"></script>
   </head>
-  <body id="crt moniter" class="off">
-    <!-- the actual device -->
-    <div id="monitor">
-        <!-- the rounded edge near the glass -->
-        <div id="bezel">
-            <!-- the overlay and horizontal pattern -->
-            <div id="crt" class="off"> 
-                <!-- slowly moving scanline -->
-                <div class="scanline"></div>
-                <!-- the input and output -->
-                <div class="terminal"></div>
-            </div>
-        </div>
+  <body>
+
+    <!-- CRT MONITER EFFECT -->
+    <div id="crt"> 
+        <div class="scanline"></div>
     </div>
     <div class="scanline"></div>
-        <header>
-            <span>WEBSITE 2.1 (2074-2099)</span>
-            <a href="#">LINK</a>
-            <div class="dropdown">
-                <button class="dropbtn">CONTACT ME</button>
-                <div class="dropdown-content">
-                  <a href="https://www.linkedin.com/in/broderick-howell-43b0161a4/" target="_blank">LINKEDIN</a>
-                  <a href="https://github.com/ZeroBitzz" target="_blank">GITHUB</a>
-                </div>
-              </div>
-        </header>
 
-        <pre id="name">
-            ____                     __                             __         
+    <!-- HEADER/NAVBAR -->
+    <header>
+        <span>VERSION 2.3 (2002-2505)</span>
+        <div class="dropdown">
+            <button class="dropbtn">CONTACT ME</button>
+            <div class="dropdown-content">
+            <a href="https://www.linkedin.com/in/broderick-howell-43b0161a4/" target="_blank">LINKEDIN</a>
+            <a href="https://github.com/ZeroBitzz" target="_blank">GITHUB</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE DATA -->
+    <pre id="name">
+             ____                     __                             __         
             /\  _`\                  /\ \                 __        /\ \        
             \ \ \L\ \  _ __   ___    \_\ \     __   _ __ /\_\    ___\ \ \/'\    
              \ \  _ <'/\`'__\/ __`\  /'_` \  /'__`\/\`'__\/\ \  /'___\ \ , <    
               \ \ \L\ \ \ \//\ \L\ \/\ \L\ \/\  __/\ \ \/ \ \ \/\ \__/\ \ \\`\  
                \ \____/\ \_\\ \____/\ \___,_\ \____\\ \_\  \ \_\ \____\\ \_\ \_\
-                \/___/  \/_/ \/___/  \/__,_ /\/____/ \/_/   \/_/\/____/ \/_/\/_/   
-                
-                <button class="blinker"></button>
-        </pre>
+                \/___/  \/_/ \/___/  \/__,_ /\/____/ \/_/   \/_/\/____/ \/_/\/_/
+                                                                            
+            <button class="blinker"></button>
+    </pre>
 
-        <section id="about-me-section">
-            <label id="about-me-label">ABOUT ME</label>
-            <ul class="about-me-list">
-                <label id="bio-label">BIO</label>
-                <li>LOREM IPSUM DOLOR SIT</li>
-                <li>AMET, CONSECTETUR  </li>
-                <li>ADIPISCING ELIT, SED</li>
-                <li>DO EIUSMOD TEMPOR</li>
-                <li>INCIDIDUNT UT LABORE</li>
-                <li>ET DOLORE MAGNA ALIQUA</li>
-            </ul>
-            <ul class="about-me-list">
-                <label id="education-label">EDUCATION</label>
-                <li>CURRENTLY ENROLLED AT U OF U</li>
-                <li>SOME COMMUNITY COLLEGE (SLCC)</li>
-                <li>HIGH SCHOOL DIPLOMA</li>
-                <li>COMPUTER PROGRAMMING CERT</li>
-                <li>COMPUTER SCIENCE CERT</li>
-                <li>CODECADEMY SOFTWARE ENGINEER COURSE</li>
-            </ul>
-            <ul class="about-me-list">
-                <label id="skills-label">SKILLS</label>
-                <li>JAVASCRIPT</li>
-                <li>PYTHON 3</li>
-                <li>GIT</li>
-                <li>HTML</li>
-                <li>GOOGLING</li>
-                <li>CSS</li>
-                <li>ADOBE ILLUSTRATOR</li>
-            </ul>
-        </section>
+    <section id="about-me-section">
+        <label id="about-me-label">ABOUT ME</label>
+        <ul class="section-content-box no-list-style" id="bio-content-box">
+            <label id="bio-label">BIOGRAPHY</label>
+            <li>MY NAME IS BRODERICK,</li>
+            <li>I AM AN ASPIRING</li>
+            <li>PHYSICIST/ENGINEER. I</li>
+            <li>LOVE COFFEE JUST AS MUCH</li>
+            <li>EXISTENCE ITSELF. ENJOY</li>
+            <li>MY HUMBLE WEBSITE.</li>
+        </ul>
+        <ul class="section-content-box">
+            <label id="skills-label">TECH SKILLS</label>
+            <li>JAVASCRIPT</li>
+            <li>PYTHON 3</li>
+            <li>GIT</li>
+            <li>HTML</li>
+            <li>GOOGLING</li>
+            <li>CSS</li>
+            <li>ADOBE ILLUSTRATOR</li>
+        </ul>
+    </section>
 
+    <section id="projects-section">
+        <label id="projects-label">COMPLETED PROJECTS | CLICK TO REPO</label>
+        <ul class="section-content-box no-list-style">
+            <li><label id="this-website-label">THIS WEBSITE</label></li>
+            <a href="https://github.com/ZeroBitzz/brodihowell.dev" target="_blank"><img src="./assests/images/my website.png" class="project-img"></a>
+            <li class="underline-text">DESCRIPTION</li>
+            <li>STYLED ON OLD CRT MONITERS,</li>
+            <li>MY WEBSITE IS OBJECTIVELY</li>
+            <li>A WEBSITE. </li>
+        </ul>
+        <ul class="section-content-box no-list-style">
+            <li><label id="hori-website-label">HORISEON CHALLENGE WEBSITE</label></li>
+            <a href="https://github.com/ZeroBitzz/Horiseon-Website" target="_blank"><img src="./assests/images/horiseon-challenge-website.png" class="project-img"></a>
+            <li class="underline-text">DESCRIPTION</li>
+            <li>HAD TO ADD ACCESSIBILITY</li>
+            <li>TO THE PAGE FOR SCREEN-</li>
+            <li>READERS. ALSO REFACTORED</li>
+            <li>SOME OF THE CODE.</li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <span>STATUS: CONNECTED </span>
-        <button type="button" id="exit-button" onclick="window.open('', '_self', ''); window.close();">EXIT PAGE</button>
-        <iframe src="https://free.timeanddate.com/clock/i8k7a9r5/n220/fn7/fs20/tct/pct/ftb/th2" frameborder="0" width="128" height="30" allowtransparency="true"></iframe>
+        <span id="status-span">STATUS=[CONNECTED]</span>
+        <span id="time"></span>
     </footer>
-    <!-- loading screen -->
+
+    <!-- LOADING SCREEN -->
     <section id="loader-wrapper">
         <div id="loading-container">
         <span id="loading-span">LOADING...</span>
         <span class="loader"><span class="loader-inner"></span></span>
     </section>
+
   </body>
 </html>

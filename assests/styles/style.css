@@ -1,13 +1,14 @@
 /* 
 ----------INDEX----------
-BASIC ELEMENT SELECTORS [LINE 13]
-LOADING SCREEN          [LINE 41]
-HEADER CONTENT          [LINE 85]
-FOOTER CONTENT          [LINE 141]
-MAIN PAGE DATA          [LINE 160]
-BREAKPOINTS             [LINE 233]
-CRT EFFECTS             [LINE 262]
-ANIMATIONS              [LINE 298]
+BASIC ELEMENT SELECTORS [LINE 14]
+LOADING SCREEN          [LINE 43]
+HEADER CONTENT          [LINE 88]
+FOOTER CONTENT          [LINE 146]
+MAIN PAGE DATA          [LINE 162]
+BREAKPOINTS             [LINE 270]
+CRT EFFECTS             [LINE 316]
+ANIMATIONS              [LINE 355]
+SCROLLBAR               [LINE 393]
 */
 
 /* BASIC ELEMENT SELECTORS */
@@ -15,10 +16,11 @@ ANIMATIONS              [LINE 298]
 * {
     box-sizing: border-box;
     animation: text-shadow 5s infinite;
+    font-family: monospace;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 27, 1);
     color: lime;
 }
 
@@ -33,7 +35,7 @@ a {
 }
 
 a:hover {
-    color: rgb(0, 122, 0);
+    color: rgb(107, 107, 107);
 }
 
 
@@ -50,6 +52,7 @@ a:hover {
     display:flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 #loading-container {
     border: 5px solid lime;
@@ -86,7 +89,7 @@ a:hover {
 
 header {
     font-size: xx-large;
-    font-family: fantasy;
+    font-family: monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -99,10 +102,11 @@ header {
     top: 0;
     background-color: lime;
     color: black;
+    z-index: 2;
 }
 
 .dropbtn {
-    font-family: fantasy;
+    font-family: monospace;
     background-color: lime;
     color: black;
     width: 200px;
@@ -118,10 +122,10 @@ header {
   
 .dropdown-content {
     border: 3px solid black;
+    width: 200px;
     display: none;
     position: absolute;
     background-color: lime;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -131,6 +135,7 @@ header {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 100%;
 }
 .dropdown-content a:hover {background-color: green;}
 
@@ -141,7 +146,8 @@ header {
 /* FOOTER CONTENT */
 
 footer {
-    font-family: fantasy;
+    font-family: monospace;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,11 +159,11 @@ footer {
     color: black;
 }
 
-#exit-button{
-    background-color: lime;
-}
-
 /* MAIN PAGE DATA */
+
+.no-list-style {list-style: none;}
+
+.underline-text {text-decoration: underline;}
 
 #name {
     display: flex;
@@ -177,7 +183,7 @@ footer {
     border: 5px solid lime;
     border-top: 40px solid lime;
     display: flex;
-    font-family: fantasy;
+    font-family: monospace;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -189,50 +195,81 @@ footer {
     font-size: xx-large;
 }
 
-.about-me-list {
+.section-content-box {
     height: 100%;
     font-size: xx-large;
     border: 5px solid lime;
     border-top: 30px solid lime;
     display: inline-table;
+    flex: wrap;
     justify-content: space-around;
 }
 
-.about-me-list > li {
-    list-style-type: none;
-    margin-right: 40px;
-}
-
 #bio-label {
-    font-size: x-large;
+    border: 3px solid green;
+    font-size: xx-large;
     color: black;
     background-color: lime;
-    margin-left: 35%;
+    margin-left: 26%;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-#education-label {
-    font-size: x-large;
+#bio-content-box li{
+    padding-right: 40px;
+}
+
+#projects-label {
+    font-size: xx-large;
     color: black;
-    background-color: lime;
-    margin-left: 30%;
-    padding-left: 5px;
-    padding-right: 5px;
+    position: absolute;
+    top: 600px;
 }
 
 #skills-label {
-    font-size: x-large;
+    border: 3px solid green;
+    font-size: xx-large;
     color: black;
     background-color: lime;
-    margin-left: 30%;
+    margin-left: 7%;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+#projects-section {
+    border: 5px solid lime;
+    border-top: 40px solid lime;
+    margin-top: 20px;
+    display: flex;
+    font-family: monospace;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-img {
+    width: 250px;
+    height: 250px;
+    border: 5px solid rgb(66, 66, 66);
+    margin-top: 10px;
+}
+
+#this-website-label {
+    background-color: lime;
+    border: 3px solid green;
+    color: black;
+    margin-left: 22%;
+}
+
+#hori-website-label {
+    background-color: lime;
+    border: 3px solid green;
+    color: black;
+    margin-left: -5%;
 }
 
 /* BREAKPOINTS */
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 712px) {
     header > span {
         display: none;
     }
@@ -243,7 +280,12 @@ footer {
     }
 
     #about-me-label {
-        top: 150px;
+        top: 160px;
+    }
+
+    #projects-label {
+        margin-top: -7%;
+        font-size: 22px;
     }
 
     .dropbtn {
@@ -253,9 +295,21 @@ footer {
         font-size: 20px;
     }
     .blinker {
-        width: 10px;
-        height: 30px;
-        margin-top: 40px;
+        display: none;
+    }
+
+    #status-span {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    #projects-label {
+        top: 910px;
     }
 }
 
@@ -271,27 +325,30 @@ footer {
         rgba(0, 0, 0, 0.1) 100%
     );
     opacity: .9;
-    position: absolute;
+    position: fixed;
     bottom: 100%;
     animation: scanline 10s linear infinite;
+    z-index: 4;
 }
 
 
 #crt:before {
+    min-height: 100%;
+    min-width: 100%;
     content: " ";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
+    bottom: auto;
     background: linear-gradient(
-        to bottom,
+        to bottom, 
         rgba(18, 16, 16, 0) 50%,
         rgba(0, 0, 0, 0.25) 50%
     );
-    background-size: 100% 8px;
-    z-index: 2;
+    background-size: 100% 7px;
+    background-attachment: scroll;
+    z-index: 3;
     pointer-events: none;
 }
 
@@ -337,16 +394,16 @@ footer {
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
   ::-webkit-scrollbar-track {
     background: #000000;
-  }
+}
   
   ::-webkit-scrollbar-thumb {
-    background: rgb(126, 126, 126);
-  }
+    background: rgb(39, 138, 0);
+}
   
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(2, 255, 65);
-  }
+    background: rgb(25, 194, 67);
+}
