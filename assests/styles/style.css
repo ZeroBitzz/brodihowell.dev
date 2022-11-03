@@ -253,6 +253,11 @@ footer {
     margin-top: 10px;
 }
 
+.project-img:hover {
+    opacity: .7;
+    border: 5px dashed lime;
+}
+
 #this-website-label {
     background-color: lime;
     border: 3px solid green;
