@@ -179,22 +179,6 @@ footer {
     margin-top: 50px;
 }
 
-#about-me-section {
-    border: 5px solid lime;
-    border-top: 40px solid lime;
-    display: flex;
-    font-family: monospace;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#about-me-label {
-    color: black;
-    position: absolute;
-    top: 200px;
-    font-size: xx-large;
-}
-
 .section-content-box {
     height: 100%;
     font-size: xx-large;
@@ -205,71 +189,9 @@ footer {
     justify-content: space-around;
 }
 
-#bio-label {
-    border: 3px solid green;
-    font-size: xx-large;
-    color: black;
-    background-color: lime;
-    margin-left: 26%;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#bio-content-box li{
-    padding-right: 40px;
-}
-
-#projects-label {
-    font-size: xx-large;
-    color: black;
-    position: absolute;
-    top: 600px;
-}
-
-#skills-label {
-    border: 3px solid green;
-    font-size: xx-large;
-    color: black;
-    background-color: lime;
-    margin-left: 7%;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-#projects-section {
-    border: 5px solid lime;
-    border-top: 40px solid lime;
-    margin-top: 20px;
-    display: flex;
-    font-family: monospace;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.project-img {
-    width: 250px;
-    height: 250px;
-    border: 5px solid rgb(66, 66, 66);
-    margin-top: 10px;
-}
-
 .project-img:hover {
     opacity: .7;
     border: 5px dashed lime;
-}
-
-#this-website-label {
-    background-color: lime;
-    border: 3px solid green;
-    color: black;
-    margin-left: 22%;
-}
-
-#hori-website-label {
-    background-color: lime;
-    border: 3px solid green;
-    color: black;
-    margin-left: -5%;
 }
 
 /* BREAKPOINTS */
