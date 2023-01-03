@@ -32,6 +32,10 @@ ul li {
     font-size: 40px;
 }
 
+ol li {
+    list-style: none;
+}
+
 
 /* LOADING SCREEN */
 #loader-wrapper {
