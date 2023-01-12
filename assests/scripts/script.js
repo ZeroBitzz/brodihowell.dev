@@ -1,14 +1,10 @@
-// REMOVES LOADING PAGE AFTER IT IS FINISHED
-function removeLoadingPage(){
+// removes the loading page
+setTimeout(() => {
     document.getElementById("loader-wrapper").style.visibility = "hidden"
-}
-setTimeout(removeLoadingPage, 3000)
+}, 3000);
 
-// ADDS LIVE TIME IN BROWSER
-function refreshTime() {
+// clock for the website
+setInterval(() => {
     const timeDisplay = document.getElementById("time");
-    const dateString = new Date().toLocaleString();
-    const formattedString = dateString.replace(", ", " - ");
-    timeDisplay.textContent = formattedString;
-}
-setInterval(refreshTime, 1000);
+    timeDisplay.textContent = new Date().toLocaleString().replace(", ", " - ");
+}, 1000);

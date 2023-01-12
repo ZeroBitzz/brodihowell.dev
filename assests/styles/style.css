@@ -165,7 +165,7 @@ footer {
 #name {
     display: flex;
     margin-top: 50px;
-    margin-left: -70px;
+    margin-left: -40px;
 }
 
 .blinker {
@@ -190,6 +190,9 @@ footer {
 
 .subsection {
     border: 5px solid lime;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     max-width: 500px;
     min-width: 300px;
     height: auto;
@@ -214,7 +217,7 @@ footer {
 
 /* BREAKPOINTS */
 
-@media screen and (max-width: 712px) {
+@media screen and (max-width: 850px) {
     header > span {
         display: none;
     }
