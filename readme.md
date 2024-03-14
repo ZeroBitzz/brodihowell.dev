@@ -1,6 +1,6 @@
 # My Personal Website
 ## Description
-I wanted my personal website to look maximum epic, so I took inspiration from really old terminal ui throughout the whole site, cuz classic is cool.
+I wanted my personal website to look maximum epic, so I took inspiration from old terminal ui throughout the whole site, cuz classic is cool.
 
 ## Deployed application
 [My Immaculate Website](https://papaya-kringle-fb67c6.netlify.app/)
